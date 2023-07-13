@@ -1,0 +1,332 @@
+* {
+    outline: 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    direction: rtl;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Vazirmatn;
+}
+.topHeader {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    text-align: center;
+    background-color: rgb(102, 18, 159);
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+.right {
+    color: white;
+}
+.right > button {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 1%;
+    margin: 1%;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+.right > button:hover {
+    color: gray;
+}
+.left {
+    color: white;
+}
+.left > p {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 1%;
+}
+.logo {
+    text-align: center;
+}
+.logo > img {
+    padding-top: 50px;
+}
+.menu {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(102, 18, 159);
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    position: sticky;
+    z-index: 10;
+    top: 50px;
+}
+.menu > ul > li {
+    color: white;
+    display: inline-block;
+    padding: 2%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu > ul > li:hover {
+    color: gray;
+}
+.dropdownBTN {
+    position: relative;
+}
+.dropdown-content {
+    position: absolute;
+    display: none;
+    background-color: rgb(102, 18, 159);
+    width: 200px;
+    text-align: center;
+    margin-top: 30px;
+    z-index: 5;
+    border-radius: 5px;
+    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.7);
+}
+.dropdown-content > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8% 0;
+}
+.dropdown-content > a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.dropdownBTN:hover .dropdown-content {
+    display: block;
+}
+.addOn {
+    width: 100%;
+    padding: 1% 5%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 20% 80%;
+}
+.rightAdd {
+    padding: 2%;
+    text-align: center;
+}
+.leftAdd {
+    padding: 2%;
+}
+.rightAdd > img {
+    display: block;
+    width: 250px;
+    height: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5% 1%;
+    z-index: 1;
+    box-shadow: 3px 3px 9px rgba(102, 18, 159, 0.4);
+    transition: all 1s;
+}
+.rightAdd > img:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 9px rgba(102, 18, 159, 0.9);
+    transition: all 1s;
+}
+.leftAdd > img {
+    display: block;
+    width: 900px;
+    height: 600px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5% 1%;
+    z-index: 1;
+    box-shadow: 3px 3px 9px rgba(102, 18, 159, 0.4);
+    transition: all 1s;
+}
+.leftAdd > img:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 9px rgba(102, 18, 159, 0.9);
+    transition: all 1s;
+}
+.title {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+    padding: 2% 10%;
+    justify-content: center;
+    align-items: center;
+}
+.title > h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.title > hr {
+    border-top: 1px solid black;
+    margin-left: 5%;
+}
+.product {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1%;
+    margin-bottom: 100px;
+}
+.imageBox {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    margin: 2% 0;
+    box-shadow: 3px 3px 9px rgba(102, 18, 159, 0.4);
+    transition: all 1s;
+}
+.imageBox:hover {
+    color: purple;
+    box-shadow: 3px 3px 9px rgba(102, 18, 159, 0.9);
+    transition: all 1s;
+}
+.image {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    position: relative;
+}
+.firstImage {
+    width: 170px;
+    height: 220px;
+    z-index: 2;
+    cursor: pointer;
+}
+.secondImage {
+    width: 170px;
+    height: 220px;
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+}
+.firstImage:hover {
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+}
+.firstImage:not(:hover) {
+    animation: fadeOut 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+.name {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1%;
+}
+.name > p {
+    font-size: 14px;
+    font-weight: bold;
+}
+.name > span {
+    background-image: url(image/logo/cart.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+.price {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+}
+.price > del {
+    font-size: 14px;
+    font-weight: bold;
+}
+.price > ins {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+@media screen and (max-width: 1200px) {
+    .rightAdd > img {
+        width: 200px;
+        height: 250px;
+    }
+    .leftAdd > img {
+        width: 700px;
+        height: 500px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .rightAdd > img {
+        width: 170px;
+        height: 220px;
+    }
+    .leftAdd > img {
+        width: 600px;
+        height: 450px;
+    }
+    .firstImage {
+        width: 150px;
+        height: 200px;
+    }
+    .secondImage {
+        width: 150px;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .product {
+        grid-template-columns: auto auto auto;
+    }
+    .firstImage {
+        width: 250px;
+        height: 300px;
+    }
+    .secondImage {
+        width: 250px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .rightAdd > img {
+        width: 100px;
+        height: 150px;
+    }
+    .leftAdd > img {
+        width: 400px;
+        height: 300px;
+    }
+    .product {
+        grid-template-columns: auto;
+    }
+}
+@media screen and (max-width: 620px) {
+    .topHeader {
+        grid-template-columns: auto;
+    }
+    .menu > ul > li {
+        display: block;
+    }
+    .addOn {
+        grid-template-columns: auto;
+    }
+    .rightAdd {
+        display: none;
+    }
+}

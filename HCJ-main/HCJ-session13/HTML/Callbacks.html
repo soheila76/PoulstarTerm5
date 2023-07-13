@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+    <h2>JavaScript Function Sequence 1</h2>
+
+    <p>JavaScript functions are executed in the sequence they are called.</p>
+
+    <p id="demo1"></p>
+
+    <script>
+        function myDisplayer1(some) {
+            document.getElementById("demo1").innerHTML = some;
+        }
+
+        function myFirst1() {
+            myDisplayer1("Hello");
+        }
+
+        function mySecond1() {
+            myDisplayer1("Goodbye");
+        }
+
+        myFirst1();
+        mySecond1();
+    </script>
+    <br>
+    <hr>
+    <br>
+    <h2>JavaScript Function Sequence </h2>
+
+    <p>JavaScript functions are executed in the sequence they are called.</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        function myDisplayer2(some) {
+            document.getElementById("demo2").innerHTML = some;
+        }
+
+        function myFirst2() {
+            myDisplayer2("Hello");
+        }
+
+        function mySecond2() {
+            myDisplayer2("Goodbye");
+        }
+
+        mySecond2();
+        myFirst2();
+    </script>
+    <br>
+    <hr>
+    <br>
+    <h2>JavaScript Functions 3</h2>
+
+    <p>Do a calculation and then display the result.</p>
+
+    <p id="demo3"></p>
+
+    <script>
+        function myDisplayer3(some) {
+            document.getElementById("demo3").innerHTML = some;
+        }
+
+        function myCalculator3(num1, num2) {
+            let sum = num1 + num2;
+            return sum;
+        }
+
+        let result3 = myCalculator3(5, 5);
+        myDisplayer3(result3);
+    </script>
+    <br>
+    <hr>
+    <br>
+    <h2>JavaScript Callbacks 4</h2>
+
+    <p>Do a calculation and then display the result.</p>
+
+    <p id="demo4"></p>
+
+    <script>
+        function myDisplayer4(some) {
+            document.getElementById("demo4").innerHTML = some;
+        }
+
+        function myCalculator4(num1, num2) {
+            let sum = num1 * num2;
+            myDisplayer4(sum);
+        }
+
+        myCalculator4(5, 5);
+    </script>
+    <br>
+    <hr>
+    <br>
+    <h2>JavaScript Callbacks 5</h2>
+
+    <p>Do a calculation and then display the result.</p>
+
+    <p id="demo5"></p>
+
+    <script>
+        function myDisplayer5(something) {
+            document.getElementById("demo5").innerHTML = something;
+        }
+
+        function myCalculator5(num1, num2, myCallback) {
+            let sum = num1 / num2;
+            myCallback(sum);
+        }
+
+        myCalculator5(5, 5, myDisplayer5);
+    </script>
+</body>
+</html>
